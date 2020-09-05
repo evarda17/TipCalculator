@@ -34,7 +34,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/JustTip.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -57,27 +57,3 @@ My fellow colleague Yujeong and I were very delighted to be given the opportunit
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-# Just Tip
-
-
-
-## Usage
-
-
-
-## Contributing
-Pull requests are welcome. 
-
-Here is a brief walkthrough of how Just Tip works:
-
-
-![](JustTip.gif)
-
-
-
-
-GIF  was created with Recordit.
-
-Notes:
-
