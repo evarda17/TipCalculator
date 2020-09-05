@@ -23,6 +23,8 @@ class TipCalculator{
         tipAmt = amtBeforeTax * tipPercent
         totalAmt =  amtBeforeTax + tipAmt
     }
+    
+// just something to add
 }
 
 
