@@ -9,7 +9,8 @@ To use it, all you need to do is type the bill amount, select desired tip percen
 ## Contributing
 Pull requests are welcome. 
 
-
+Here is a brief walkthrough of how Just Tip works.
 ![](JustTip.gif)
 
 GIF  was created with Recordit.
+
