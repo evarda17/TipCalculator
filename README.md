@@ -11,3 +11,5 @@ Pull requests are welcome.
 
 
 ![](JustTip.gif)
+
+GIF  was created with Recordit.
