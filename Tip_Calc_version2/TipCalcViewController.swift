@@ -11,6 +11,9 @@ import UIKit
 
 class TipCalcViewController: UIViewController{
     
+    @IBOutlet weak var TotalTextFieldLabel: UIView!
+    @IBOutlet weak var eachPayLabel: UIView!
+    @IBOutlet weak var roundBillField: UITextField!
     @IBOutlet weak var amtBeforeTax:
     UITextField!
     @IBOutlet weak var TipPercentLabel:
@@ -21,7 +24,7 @@ class TipCalcViewController: UIViewController{
     UISlider!
     @IBOutlet weak var NumOfSplitLabel:
     UILabel!
-    @IBOutlet weak var amtEachPerson:
+    @IBOutlet weak var amtEachPersonLabel:
     UILabel!
     @IBOutlet weak var totalResultLabel:  UILabel!
     
@@ -32,28 +35,50 @@ class TipCalcViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         amtBeforeTax.becomeFirstResponder()
+        
+        self.eachPayLabel.layer.cornerRadius = 12
+        self.TotalTextFieldLabel.layer.cornerRadius = 12
+
+        
+    
     }
     
     
-    func calculateTip(){
-          
-      }
+    
+    func calculateBill(){
+//        let bill  = Double(amtBeforeTax.text!) ?? 0
+//        let tip = bill * 0.1
+//        let total = bill + tip
+        
+//        totalResultLabel.text = "$\(total)"
+        
+        tipCalculator.tipPercent = Double(TipPercentSlider.value)/100.0
+        tipCalculator.amtBeforeTax = (amtBeforeTax.text! as NSString).doubleValue
+        tipCalculator.calculateTip()
+        updateUI()
+}
       
     func updateUI(){
-          
+        totalResultLabel.text = String(format: "$%0.2f", tipCalculator.totalAmt)
+        
+        let numOfPeople: Int = Int(NumOfSplitSlider.value)
+        
+        amtEachPersonLabel.text = String(format: "$%0.2f", tipCalculator.totalAmt / Double(numOfPeople))
       }
     
     
     @IBAction func TipPercentSliderValueChanged(sender: Any){
         TipPercentLabel.text = String(format:"Tip: %02d%%", Int(TipPercentSlider.value))
-        calculateTip()
+        calculateBill()
         }
     @IBAction func NumOfSplitSliderValueChanged(sender: Any){
-        NumOfSplitLabel.text =  String(format:"Split: %02d%%", Int(NumOfSplitSlider.value))
+        NumOfSplitLabel.text = "Split: \(Int(NumOfSplitSlider.value))"
+        calculateBill()
     }
     
-    @IBAction func amtBeforetaxChanged(sender: Any){
-        calculateTip()
+    @IBAction func amtBeforeTaxChanged(_ sender: Any) {
+        calculateBill()
+
     }
     
 }
