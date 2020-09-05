@@ -1,6 +1,6 @@
-# TipCalculator
+# Just Tip
 
-TipCalculator is an application written in Swift for iOS that calculates the tip and the total amount due for payment. This code was submitted as a pre-work for CodePath.
+Just Tip is an application written in Swift for iOS that calculates the tip and the total amount due for payment. This code was submitted as a pre-work for CodePath.
 
 ## Usage
 
