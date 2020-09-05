@@ -9,3 +9,5 @@ To use it, all you need to do is type the bill amount, select desired tip percen
 ## Contributing
 Pull requests are welcome. 
 
+
+![](JustTip.gif)
